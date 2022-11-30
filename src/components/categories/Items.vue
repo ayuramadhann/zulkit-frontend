@@ -14,7 +14,6 @@ async function getItemsData (){
   try {
     const response = await axios.get('http://zullkit-backend.buildwithangga.id/api/categories?id='+ route.params.id +'&show_product=1')
     items.value = response.data.data.products
-    category.value = response.data.data
     console.log(response.data.data)
   } catch (error) {
     console.error(error);
