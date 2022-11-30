@@ -17,7 +17,7 @@
             <span class="sr-only">Open user menu</span>
             <img
                 class="w-8 h-8 rounded-full"
-                src="user.profile_photo_url"
+                src=""
                 alt="user photo"
             />
         </button>
