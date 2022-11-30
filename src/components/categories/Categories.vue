@@ -30,6 +30,7 @@ onMounted(() => {
       <div class="flex flex-wrap -mx-1 lg:-mx-4">
         <CategoriesCard
           v-for="category in categories"
+          :id = category.id
           :key = category.id
           :title= category.name
           :count= category.products_count
