@@ -2,10 +2,10 @@
 import { onMounted, computed } from 'vue'
 import { useUserStore } from '@/stores/user'
 
-import AuthButton from './AuthButton.vue'
-import Logo from './Logo.vue'
-import UserInfo from './UserInfo.vue'
 import NavigationLinks from './NavigationLinks.vue'
+import Logo from './Logo.vue'
+import AuthButton from './AuthButton.vue'
+import UserInfo from './UserInfo.vue'
 
 const userStore = useUserStore()
 const isLoggedIn = computed(() => userStore.isLoggedIn)

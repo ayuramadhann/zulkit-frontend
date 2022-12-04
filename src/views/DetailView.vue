@@ -1,5 +1,6 @@
 <script setup>
 import Gallery from '@/components/detail/Gallery.vue'
+import { useUserStore } from '@/stores/user'
 
 import {RouterLink, useRoute} from 'vue-router'
 import {ref, onMounted, computed} from 'vue'
@@ -8,9 +9,13 @@ import axios from 'axios';
 const route = useRoute()
 const item = ref(false)
 
+const userStore = useUserStore()
+const isLoggedIn = computed(() => userStore.isLoggedIn)
+const user = computed(() => userStore.getUser)
+
 async function getProduct(){
   try {
-    const response = await axios.get('http://zullkit-backend.buildwithangga.id/api/products?id='+ route.params.id)
+    const response = await axios.get('https://zullkit-backend.buildwithangga.id/api/products?id='+ route.params.id)
     item.value = response.data.data 
   } catch (error) {
     console.log(error);
@@ -23,6 +28,7 @@ const features = computed(() => {
 
 onMounted(() => {
   getProduct()
+  userStore.fetchUser()
 })
 </script>
 
@@ -79,12 +85,9 @@ onMounted(() => {
                 </li>
               </ul>
               </div>
-              <RouterLink
-                to="/pricing"
-                class="inline-flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-full hover:bg-indigo-700 md:py-2 md:text-md md:px-10 hover:shadow"
-              >
-                Download Now
-            </RouterLink>
+              <a v-if="isLoggedIn && user.data.subscription.length > 0" :href="item.file" class="inline-flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-full hover:bg-indigo-700 md:py-2 md:text-md md:px-10 hover:shadow">Download Now</a>
+              
+              <RouterLink v-else to="/pricing" class="inline-flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-full hover:bg-indigo-700 md:py-2 md:text-md md:px-10 hover:shadow">Subscribe</RouterLink>
             </div>
           </div>
         </aside>
