@@ -9,7 +9,6 @@ async function getItemsData (){
   try {
     const response = await axios.get('http://zullkit-backend.buildwithangga.id/api/products')
     items.value = response.data.data.data
-    console.log(response.data)
   } catch (error) {
     console.error(error);
   }
@@ -18,11 +17,6 @@ async function getItemsData (){
 onMounted(() => {
   getItemsData()
 })
-// const items = ref([
-//   {id: 1, title: 'Mobile UI Kit', description: 'Mobile UI Kit', image: 'categories-1.jpg'},
-//   {id: 2, title: 'Fonts', description: 'Mobile UI Kit', image: 'categories-2.jpg'},
-//   {id: 3, title: 'Icon Set', description: 'Mobile UI Kit', image: 'categories-3.jpg'},
-// ])
 
 </script>
 <template>
