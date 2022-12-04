@@ -1,8 +1,8 @@
 <script setup>
   import RegisterForm from '@/components/authentication/RegisterForm.vue'
-  import IconLayer from '@/components/icons/IconLayer.vue'
-  import IconBadge from '@/components/icons/IconBadge.vue';
-  import IconBook from '@/components/icons/IconBook.vue';
+  // import IconLayer from '@/components/icons/IconLayer.vue'
+  // import IconBadge from '@/components/icons/IconBadge.vue';
+  // import IconBook from '@/components/icons/IconBook.vue';
 </script>
 
 <template>
@@ -21,7 +21,7 @@
               <div class="mx-auto md:mx-0">
                 <div class="mb-12">
                   <div class="block mb-2">
-                    <IconLayer/>
+                    <!-- <IconLayer/> -->
                     <h3 class="inline-block ml-2 text-lg font-semibold">
                       Customizable
                     </h3>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="mb-12">
                   <div class="block mb-2">
-                    <IconBadge/>
+                    <!-- <IconBadge/> -->
                     <h3 class="inline-block ml-2 text-lg font-semibold">
                       500 Fortune
                     </h3>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="mb-12">
                   <div class="block mb-2">
-                    <IconBook/>
+                    <!-- <IconBook/> -->
 
                     <h3 class="inline-block ml-2 text-lg font-semibold">
                       Documentation
