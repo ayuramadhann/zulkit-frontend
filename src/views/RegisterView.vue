@@ -1,8 +1,8 @@
 <script setup>
   import RegisterForm from '@/components/authentication/RegisterForm.vue'
   import IconLayer from '@/components/icons/IconLayer.vue'
-  import IconBadge from '../components/icons/IconBadge.vue';
-  import IconBook from '../components/icons/IconBook.vue';
+  import IconBadge from '@/components/icons/IconBadge.vue';
+  import IconBook from '@/components/icons/IconBook.vue';
 </script>
 
 <template>

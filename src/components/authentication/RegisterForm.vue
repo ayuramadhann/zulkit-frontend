@@ -1,6 +1,7 @@
 <script setup>
 import {ref} from 'vue'
 import {RouterLink, useRouter} from 'vue-router'
+import { useUserStore } from '@/stores/user'
 import axios from 'axios';
 
 
