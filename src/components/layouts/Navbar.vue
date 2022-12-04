@@ -2,10 +2,10 @@
 import { onMounted, computed } from 'vue'
 import { useUserStore } from '@/stores/user'
 
-import Logo from './Logo.vue'
-import NavigationLinks from './NavigationLinks.vue'
 import UserInfo from './UserInfo.vue'
 import AuthButton from './AuthButton.vue'
+import Logo from './Logo.vue'
+import NavigationLinks from './NavigationLinks.vue'
 
 const userStore = useUserStore()
 const user = computed(() => userStore.getUser)
