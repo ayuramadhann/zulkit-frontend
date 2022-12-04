@@ -8,8 +8,8 @@ import Logo from './Logo.vue'
 import NavigationLinks from './NavigationLinks.vue'
 
 const userStore = useUserStore()
-const user = computed(() => userStore.getUser)
 const isLoggedIn = computed(() => userStore.isLoggedIn)
+const user = computed(() => userStore.getUser)
 
 onMounted(() => {
   userStore.fetchUser()
