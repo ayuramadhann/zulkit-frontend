@@ -23,11 +23,12 @@ async function register() {
           title: form.value.title
       }
     );
-    console.log(response);
     localStorage.setItem('access_token', response.data.data.access_token)
     localStorage.setItem('token_type', response.data.data.token_type)
+
     userStore.fetchUser();
     router.push('/')
+
   } catch (error) {
     console.error(error);
   }

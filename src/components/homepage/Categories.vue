@@ -10,7 +10,6 @@ async function getCategoriesData(){
   try {
     const response = await axios.get('http://zullkit-backend.buildwithangga.id/api/categories?limit=4')
     categories.value = response.data.data.data
-    console.log(response.data)
   } catch (error) {
     console.error(error);
   }
