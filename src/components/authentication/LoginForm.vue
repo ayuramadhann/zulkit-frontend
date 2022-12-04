@@ -18,6 +18,7 @@ async function login(){
       email: form.value.email,
       password: form.value.password,
     });
+    
     localStorage.setItem('access_token', response.data.data.access_token)
     localStorage.setItem('token_type', response.data.data.token_type)
 
